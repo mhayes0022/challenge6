@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's the Weather</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./develop/css/style.css" />
+    <title>What's the Weather?</title>
 </head>
 
 <body>
-    
+    <header>
+        <h1>What's the Weather?</h1>
+    </header>
+
+    <section id="search-section">
+        <form id="search-bar" action="" method="get">
+            <div>
+                <input id="search" type="search" placeholder="City Name">
+            </div>
+            <div>
+                <button id="search-button" type="submit"><i>Search</i></button>
+            </div>
+        </form>
+        <div class="empty-container">
+
+        </div>
+    </section>
+
+
+    <main>
+        <section id="current-weather">
+            <div id="city-name"></div>
+
+        </section>
+
+        <section id="5-day-forecast">
+
+        </section>
+    </main>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./develop/js/script.js"></script>
 </body>
+
 </html>
