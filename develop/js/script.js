@@ -1,5 +1,5 @@
 const APIkey = 'caedc3880dded376b8777ec4072a1cca';
-let city = 'Lisbon';
+let city = 'London';
 
 
 function getWeather() {
@@ -29,5 +29,5 @@ function getWeather() {
             console.error('Error fetching data:', error);
         });
 };
-getWeather();
+//getWeather();
 
