@@ -16,6 +16,7 @@ body {
 
 .bigger:hover {
     transform: scale(1.1);
+    background-color: lightgrey;
 }
 
 
