@@ -213,3 +213,4 @@ searchHistoryBtns();
 //display today's date at top of current forecast
 //contingency for if a non city is searched
 //styling
+//current weather section collapses funny in smaller screen sizes

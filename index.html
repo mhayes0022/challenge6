@@ -16,7 +16,7 @@
       </style>
     <title>What's the Weather?</title>
 </head>
-<!--Below, don't put flex on body-->
+<!--Note: below, don't put flex on body-->
 
 <body class="m-0 p-0">
     <header class="bg-blue-800 ">
@@ -24,7 +24,7 @@
     </header>
 
     <section id="page-contents" class="m-0 p-0 w-full h-full">
-
+<!--Below is the search bar section-->
         <section id="search-section"
             class="float-left block h-full w-64 mx-2 mb-2 border-2 border-gray-700 border-solid rounded">
             <form id="search-bar" class="ml-5" action="" method="get">
@@ -38,11 +38,13 @@
                         type="submit"><i>Search</i></button>
                 </div>
             </form>
+            <!--Below is the empty container for search history-->
             <div id="savedCities" class="empty-container border">
 
             </div>
         </section>
 
+        <!--Below is the section for the current weather-->
         <!--bg-red-800 background color for element size testing-->
         <main class="h-full flex flex-col  mt-2">
             <section id="current-weather" class="block ml-2 h-2/5">
@@ -55,6 +57,7 @@
 
             </section>
 
+            <!--Below is the section for the five day forecast-->
             <section id="5-day-forecast" class="h-3/5 ml-2">
                 <h2 class="text-xl bg-blue-400 text-center">5 Day Forecast</h2>
                 <h3 id="city-name"></h3>
