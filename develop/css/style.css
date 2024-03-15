@@ -1,42 +1,63 @@
 html,
 body {
-    width: 100%;
-    height: 100%;
-    /* box-sizing: border-box; */
+  width: 100%;
+  height: 100%;
+  /* box-sizing: border-box; */
 }
 
 * {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 
 .bigger {
-    transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .bigger:hover {
-    transform: scale(1.1);
-    background-color: lightgrey;
+  transform: scale(1.1);
+  background-color: lightgrey;
 }
 
+.biggerCityBtns {
+  transition: all .2s ease-in-out;
+}
+
+.biggerCityBtns:hover {
+  transform: scale(1.1);
+}
+
+.cityBtns {
+  border: solid;
+  border-radius: 2xp;
+  border-color: darkblue;
+  width: 200px;
+  margin-left: 17px;
+  margin-top: 30px;
+}
+
+.border {
+  border-top: 3px solid black;
+  margin-top: 5px;
+}
 
 
 
 @media screen and (max-width: 900px) {
-    #search-section {
-      height: auto;
-      margin-top: 2px;
-    }
+  #search-section {
+    height: auto;
+    margin-top: 2px;
   }
+}
 
-  @media screen and (max-width: 800px) {
-    #search-bar {
-      margin:0;
-    }
+@media screen and (max-width: 800px) {
+  #search-bar {
+    margin: 0;
   }
+}
 
-  @media screen and (max-width: 900px) {
-    main {
-      clear:left;
-    }
+@media screen and (max-width: 900px) {
+  main {
+    clear: left;
   }
+}
