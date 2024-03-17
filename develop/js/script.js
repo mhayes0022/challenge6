@@ -1,12 +1,12 @@
 const APIkey = 'caedc3880dded376b8777ec4072a1cca';
 const dayjsAPI = 'path/to/dayjs/dayjs.min.js';
 let searchInput = document.getElementById('search');
-let searchBtn = document.getElementById('search-button');
-let cityName = document.getElementById('city-name');
+let searchBtn = document.getElementById('searchButton');
+let cityName = document.getElementById('cityName');
 let currentTemp = document.getElementById('temperature');
 let currentWind = document.getElementById('wind');
 let currentHumid = document.getElementById('humidity');
-let currentWeatherIcon = document.getElementById('weather-icon');
+let currentWeatherIcon = document.getElementById('currentWeatherIcon');
 let savedCities = document.getElementById('savedCities');
 let searchHistory = JSON.parse(localStorage.getItem('savedCities')) || []
 let buttonContainer = document.getElementById("savedCities")
@@ -44,11 +44,22 @@ let forecastFiveHumidity = document.getElementById('humidityDayFive');
 //Below collects the city the user has searched
 function collectUserInput() {
     let city = searchInput.value.trim();
+    if (city == '' || city == null){
+        alert("You must enter a city")
+        return;
+    }
+    //checkCity(city)
     getLocationCoordinates(city)
-}
+};
 
-//Can I stick the check to ensure the city is valid in the function above?
+//Can I stick the check to ensure the city is valid in the function above? Below?
 
+// function checkCity(city) {
+//     if (city ==) 
+   
+// };
+
+// == "HTTP/1.1 404 Not Found"
 
 //Below fetches API data as longitude and latitude 
 function getLocationCoordinates(city) {
@@ -62,6 +73,9 @@ function getLocationCoordinates(city) {
             getCurrentWeather(latitude, longitude)
             getFiveDayForecast(latitude, longitude)
         })
+        .catch(error => {
+            console.error('Error fetching city coordinates', error);
+        });
 };
 
 
@@ -120,7 +134,7 @@ function getFiveDayForecast(lat, lon) {
             //console.log(data.list);
         })
         .catch(error => {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching weather', error);
         });
 }
 

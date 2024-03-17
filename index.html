@@ -23,17 +23,17 @@
         <h1 class="font-bold font-sans text-center text-5xl pb-10 pt-2 text-white">What's the Weather?</h1>
     </header>
 
-    <section id="page-contents" class="m-0 p-0 w-full h-full">
+    <section id="pageContents" class="m-0 p-0 w-full h-full">
 <!--Below is the search bar section-->
-        <section id="search-section"
+        <section id="searchSection"
             class="float-left block h-full w-64 mx-2 mb-2 border-2 border-gray-700 border-solid rounded bg-gray-200">
-            <form id="search-bar" class="ml-5" action="" method="get">
+            <form id="searchBar" class="ml-5" action="" method="get">
                 <div>
                     <input id="search" class="border-4 m-2 border-black border-solid rounded" type="search"
                         placeholder="City Name">
                 </div>
                 <div>
-                    <button id="search-button"
+                    <button id="searchButton"
                         class="bigger ml-2 w-20 border-2 border-blue-400 bg-gray-100 border-solid rounded-md text-center"
                         type="submit"><i>Search</i></button>
                 </div>
@@ -46,10 +46,10 @@
 
         <!--Below is the section for the current weather-->
         <main class="h-full flex flex-col mt-2">
-            <section id="current-weather" class="h-2/4 bg-indigo-500 border-gray-800 border-2 ">
+            <section id="currentWeather" class="h-2/4 bg-blue-600 border-gray-800 border-2 ">
                 <h1 class="ml-2 text-xl font-serif italic">Current Weather in: </h1>
-                <h2 id="city-name" class="text-6xl ml-10 mt-3">City Name</h2>
-                <img id="weather-icon" src="" class="mx-auto">
+                <h2 id="cityName" class="text-6xl ml-10 mt-3">City Name</h2>
+                <img id="currentWeatherIcon" src="" class="mx-auto">
                 <p id="temperature" class="text-center text-2xl font-serif mt-2">Temperature</p>
                 <p id="wind" class="text-center text-2xl font-serif mt-2">Wind</p>
                 <p id="humidity" class="text-center text-2xl font-serif mt-2">Humidity</p>
@@ -57,9 +57,9 @@
             </section>
 
             <!--Below is the section for the five day forecast-->
-            <section id="5-day-forecast" class="h-2/4">
+            <section id="5DayForecast" class="h-2/4">
                 <h2 class="text-xl bg-blue-300 text-center font-bold text-gray-600 border">5 Day Forecast</h2>
-                <h3 id="city-name"></h3>
+                <h3 id="cityName"></h3>
 
                 <section id="forecastWeatherSection" class="columns-5 h-full text-center">
                     <div id="dayOneForecast" class="h-full bg-blue-300">

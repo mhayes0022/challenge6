@@ -49,13 +49,13 @@ body {
 
 /* media queries for the search section */
 @media screen and (max-width: 900px) {
-  #search-section {
+  #searchSection {
     height: auto;
     margin-top: 2px;
   }
 }
 @media screen and (max-width: 800px) {
-  #search-bar {
+  #searchBar {
     margin: 0;
   }
 }
@@ -69,7 +69,7 @@ body {
 
 /* media queries for current weather section */
 @media screen and (max-width: 600px) {
-  #current-weather {
+  #currentWeather {
     height:900px;
   }
 }
