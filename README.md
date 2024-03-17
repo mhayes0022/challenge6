@@ -10,6 +10,7 @@ the application sends the city name to the OpenWeather API and retrieves the wea
 
 
 ## Website Screenshot
+![What's the Weather2](https://github.com/mhayes0022/challenge6/assets/153241703/e317ee38-d48e-4821-bad9-a9f985d81e8f)
 
 
 ## Credits
