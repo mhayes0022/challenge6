@@ -3,6 +3,7 @@ const dayjsAPI = 'path/to/dayjs/dayjs.min.js';
 let searchInput = document.getElementById('search');
 let searchBtn = document.getElementById('searchButton');
 let cityName = document.getElementById('cityName');
+let currentDate = document.getElementById('currentDate');
 let currentTemp = document.getElementById('temperature');
 let currentWind = document.getElementById('wind');
 let currentHumid = document.getElementById('humidity');
@@ -90,45 +91,45 @@ function getFiveDayForecast(lat, lon) {
             let iconIdOne = data.list[8].weather[0].icon;
             let weatherIconOne = `https://openweathermap.org/img/wn/${iconIdOne}@2x.png`
             forecastOneIcon.setAttribute('src', weatherIconOne);
-            forecastOneTemperature.innerHTML = ('Temperature: ' + data.list[8].main.temp);
-            forecastOneWind.innerHTML = ('Wind Speed: ' + data.list[8].wind.speed);
-            forecastOneHumidity.innerHTML = ('Humidity: ' + data.list[8].main.humidity);
+            forecastOneTemperature.innerHTML = 'Temperature: ' + data.list[8].main.temp + ' F';
+            forecastOneWind.innerHTML = 'Wind Speed: ' + data.list[8].wind.speed + ' MPH';
+            forecastOneHumidity.innerHTML = 'Humidity: ' + data.list[8].main.humidity + ' %';
 
             //forecast information for the day after tomorrow
             let unixDateTwo = data.list[16].dt;
             let iconIdTwo = data.list[16].weather[0].icon;
             let weatherIconTwo = `https://openweathermap.org/img/wn/${iconIdTwo}@2x.png`
             forecastTwoIcon.setAttribute('src', weatherIconTwo);
-            forecastTwoTemperature.innerHTML = ('Temperature: ' + data.list[16].main.temp);
-            forecastTwoWind.innerHTML = ('Wind Speed: ' + data.list[16].wind.speed);
-            forecastTwoHumidity.innerHTML = ('Humidity: ' + data.list[16].main.humidity);
+            forecastTwoTemperature.innerHTML = 'Temperature: ' + data.list[16].main.temp + ' F';
+            forecastTwoWind.innerHTML = 'Wind Speed: ' + data.list[16].wind.speed + ' MPH';
+            forecastTwoHumidity.innerHTML = 'Humidity: ' + data.list[16].main.humidity + ' %';
 
             //forecast information for three days from now
             let unixDateThree = data.list[24].dt;
             let iconIdThree = data.list[24].weather[0].icon;
             let weatherIconThree = `https://openweathermap.org/img/wn/${iconIdThree}@2x.png`
             forecastThreeIcon.setAttribute('src', weatherIconThree);
-            forecastThreeTemperature.innerHTML = ('Temperature: ' + data.list[24].main.temp);
-            forecastThreeWind.innerHTML = ('Wind Speed: ' + data.list[24].wind.speed);
-            forecastThreeHumidity.innerHTML = ('Humidity: ' + data.list[24].main.humidity);
+            forecastThreeTemperature.innerHTML = 'Temperature: ' + data.list[24].main.temp + ' F';
+            forecastThreeWind.innerHTML = 'Wind Speed: ' + data.list[24].wind.speed + ' MPH';
+            forecastThreeHumidity.innerHTML = 'Humidity: ' + data.list[24].main.humidity + ' %';
 
             //forecast information for four days from now
             let unixDateFour = data.list[32].dt;
             let iconIdFour = data.list[32].weather[0].icon;
             let weatherIconFour = `https://openweathermap.org/img/wn/${iconIdFour}@2x.png`
             forecastFourIcon.setAttribute('src', weatherIconFour);
-            forecastFourTemperature.innerHTML = ('Temperature: ' + data.list[32].main.temp);
-            forecastFourWind.innerHTML = ('Wind Speed: ' + data.list[32].wind.speed);
-            forecastFourHumidity.innerHTML = ('Humidity: ' + data.list[32].main.humidity);
+            forecastFourTemperature.innerHTML = 'Temperature: ' + data.list[32].main.temp + ' F';
+            forecastFourWind.innerHTML = 'Wind Speed: ' + data.list[32].wind.speed + 'MPH';
+            forecastFourHumidity.innerHTML = 'Humidity: ' + data.list[32].main.humidity + ' %';
 
             //forecast information for five days from now
             let unixDateFive = data.list[39].dt;
             let iconIdFive = data.list[39].weather[0].icon;
             let weatherIconFive = `https://openweathermap.org/img/wn/${iconIdFive}@2x.png`
             forecastFiveIcon.setAttribute('src', weatherIconFive);
-            forecastFiveTemperature.innerHTML = ('Temperature: ' + data.list[39].main.temp);
-            forecastFiveWind.innerHTML = ('Wind Speed: ' + data.list[39].wind.speed);
-            forecastFiveHumidity.innerHTML = ('Humidity: ' + data.list[39].main.humidity);
+            forecastFiveTemperature.innerHTML = 'Temperature: ' + data.list[39].main.temp + ' F';
+            forecastFiveWind.innerHTML = 'Wind Speed: ' + data.list[39].wind.speed + ' MPH';
+            forecastFiveHumidity.innerHTML = 'Humidity: ' + data.list[39].main.humidity + ' %';
 
             convertDates(unixDateOne, unixDateTwo, unixDateThree, unixDateFour, unixDateFive);
             //console.log(data.list);
@@ -157,12 +158,13 @@ function getCurrentWeather(lat, lon) {
     fetch(openWeatherURL).then((res) => res.json())
         .then(data => {
             storeInLocalStorage(data.name)
-
             //console.log(data);
             cityName.innerHTML = data.name;
-            currentTemp.innerHTML = 'Temperature: ' + data.main.temp;
-            currentWind.innerHTML = ('Wind Speed: ' + data.wind.speed);
-            currentHumid.innerHTML = ('Humidity: ' + data.main.humidity);
+            //let currentUnixDate = data.dt;
+            currentDate.innerHTML = dayjs.unix(data.dt).format('MMM DD YYYY');
+            currentTemp.innerHTML = 'Temperature: ' + data.main.temp + ' F';
+            currentWind.innerHTML = 'Wind Speed: ' + data.wind.speed + ' MPH';
+            currentHumid.innerHTML = 'Humidity: ' + data.main.humidity + ' %';
             let iconId = data.weather[0].icon;
             let weatherIcon = `https://openweathermap.org/img/wn/${iconId}@2x.png`
             currentWeatherIcon.setAttribute('src', weatherIcon);
@@ -171,8 +173,6 @@ function getCurrentWeather(lat, lon) {
             console.error('Error fetching data:', error);
         });
 }
-
-
 
 
 
