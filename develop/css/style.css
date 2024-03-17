@@ -39,6 +39,7 @@ body {
 .cityBtns {
   border: solid;
   border-radius: 2px;
+  background-color:aliceblue;
   border-color: darkblue;
   width: 200px;
   margin-left: 17px;
@@ -46,22 +47,36 @@ body {
 }
 
 
-/* media queries */
+/* media queries for the search section */
 @media screen and (max-width: 900px) {
   #search-section {
     height: auto;
     margin-top: 2px;
   }
 }
-
 @media screen and (max-width: 800px) {
   #search-bar {
     margin: 0;
   }
 }
 
+/* media queries for main page */
 @media screen and (max-width: 900px) {
   main {
     clear: left;
+  }
+}
+
+/* media queries for current weather section */
+@media screen and (max-width: 600px) {
+  #current-weather {
+    height:900px;
+  }
+}
+
+/* media queries for forecast section */
+@media screen and (max-width: 600px) {
+  #forecastWeatherSection {
+    font-size: 15px;
   }
 }

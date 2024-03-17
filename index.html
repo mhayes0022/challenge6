@@ -19,14 +19,14 @@
 <!--Note: below, don't put flex on body-->
 
 <body class="m-0 p-0">
-    <header class="bg-blue-800 ">
+    <header class="bg-blue-900 ">
         <h1 class="font-bold font-sans text-center text-5xl pb-10 pt-2 text-white">What's the Weather?</h1>
     </header>
 
     <section id="page-contents" class="m-0 p-0 w-full h-full">
 <!--Below is the search bar section-->
         <section id="search-section"
-            class="float-left block h-full w-64 mx-2 mb-2 border-2 border-gray-700 border-solid rounded">
+            class="float-left block h-full w-64 mx-2 mb-2 border-2 border-gray-700 border-solid rounded bg-gray-200">
             <form id="search-bar" class="ml-5" action="" method="get">
                 <div>
                     <input id="search" class="border-4 m-2 border-black border-solid rounded" type="search"
@@ -34,7 +34,7 @@
                 </div>
                 <div>
                     <button id="search-button"
-                        class="bigger ml-2 w-20 border-2 border-blue-400 bg-gray-200 border-solid rounded-md text-center"
+                        class="bigger ml-2 w-20 border-2 border-blue-400 bg-gray-100 border-solid rounded-md text-center"
                         type="submit"><i>Search</i></button>
                 </div>
             </form>
@@ -45,58 +45,57 @@
         </section>
 
         <!--Below is the section for the current weather-->
-        <!--bg-red-800 background color for element size testing-->
-        <main class="h-full flex flex-col  mt-2">
-            <section id="current-weather" class="block ml-2 h-2/5">
-                <h1>Current Weather</h1>
-                <h2 id="city-name">City Name</h2>
-                <img id="weather-icon" src="">
-                <p id="temperature">Temperature</p>
-                <p id="wind">Wind</p>
-                <p id="humidity">Humidity</p>
+        <main class="h-full flex flex-col mt-2">
+            <section id="current-weather" class="h-2/4 bg-indigo-500 border-gray-800 border-2 ">
+                <h1 class="ml-2 text-xl font-serif italic">Current Weather in: </h1>
+                <h2 id="city-name" class="text-6xl ml-10 mt-3">City Name</h2>
+                <img id="weather-icon" src="" class="mx-auto">
+                <p id="temperature" class="text-center text-2xl font-serif mt-2">Temperature</p>
+                <p id="wind" class="text-center text-2xl font-serif mt-2">Wind</p>
+                <p id="humidity" class="text-center text-2xl font-serif mt-2">Humidity</p>
 
             </section>
 
             <!--Below is the section for the five day forecast-->
-            <section id="5-day-forecast" class="h-3/5 ml-2">
-                <h2 class="text-xl bg-blue-400 text-center">5 Day Forecast</h2>
+            <section id="5-day-forecast" class="h-2/4">
+                <h2 class="text-xl bg-blue-300 text-center font-bold text-gray-600 border">5 Day Forecast</h2>
                 <h3 id="city-name"></h3>
 
-                <section id="forecastWeatherSection" class="columns-5 h-full">
-                    <div id="dayOneForecast" class="h-full">
-                        <h3 id="dateOne"></h3>
-                        <img id="weatherIconOne" src="">
-                        <p id="tempDayOne"></p>
-                        <p id="windDayOne"></p>
-                        <p id="humidityDayOne"></p>
+                <section id="forecastWeatherSection" class="columns-5 h-full text-center">
+                    <div id="dayOneForecast" class="h-full bg-blue-300">
+                        <h3 id="dateOne" class="text-lg underline"></h3>
+                        <img id="weatherIconOne" src="" class="mx-auto">
+                        <p id="tempDayOne" class="text-gray-700 text-clip"></p>
+                        <p id="windDayOne" class="text-gray-700"></p>
+                        <p id="humidityDayOne" class="text-gray-700"></p>
                     </div>
-                    <div id="dayTwoForecast" class="h-full">
-                        <h3 id="dateTwo"></h3>
-                        <img id="weatherIconTwo" src="">
-                        <p id="tempDayTwo"></p>
-                        <p id="windDayTwo"></p>
-                        <p id="humidityDayTwo"></p>
+                    <div id="dayTwoForecast" class="h-full bg-blue-200">
+                        <h3 id="dateTwo" class="text-lg underline"></h3>
+                        <img id="weatherIconTwo" src="" class="mx-auto">
+                        <p id="tempDayTwo" class="text-gray-700 text-clip"></p>
+                        <p id="windDayTwo" class="text-gray-700"></p>
+                        <p id="humidityDayTwo" class="text-gray-700"></p>
                     </div>
-                    <div id="dayThreeForecast" class="h-full">
-                        <h3 id="dateThree"></h3>
-                        <img id="weatherIconThree" src="">
-                        <p id="tempDayThree"></p>
-                        <p id="windDayThree"></p>
-                        <p id="humidityDayThree"></p>
+                    <div id="dayThreeForecast" class="h-full bg-blue-300">
+                        <h3 id="dateThree" class="text-lg underline"></h3>
+                        <img id="weatherIconThree" src="" class="mx-auto">
+                        <p id="tempDayThree" class="text-gray-700 text-clip"></p>
+                        <p id="windDayThree" class="text-gray-700"></p>
+                        <p id="humidityDayThree" class="text-gray-700"></p>
                     </div>
-                    <div id="dayFourForecast" class="h-full">
-                        <h3 id="dateFour"></h3>
-                        <img id="weatherIconFour" src="">
-                        <p id="tempDayFour"></p>
-                        <p id="windDayFour"></p>
-                        <p id="humidityDayFour"></p>
+                    <div id="dayFourForecast" class="h-full bg-blue-200">
+                        <h3 id="dateFour" class="text-lg underline"></h3>
+                        <img id="weatherIconFour" src="" class="mx-auto">
+                        <p id="tempDayFour" class="text-gray-700 text-clip"></p>
+                        <p id="windDayFour" class="text-gray-700"></p>
+                        <p id="humidityDayFour" class="text-gray-700"></p>
                     </div>
-                    <div id="dayFiveForecast" class="h-full">
-                        <h3 id="dateFive"></h3>
-                        <img id="weatherIconFive" src="">
-                        <p id="tempDayFive"></p>
-                        <p id="windDayFive"></p>
-                        <p id="humidityDayFive"></p>
+                    <div id="dayFiveForecast" class="h-full bg-blue-300">
+                        <h3 id="dateFive" class="text-lg underline"></h3>
+                        <img id="weatherIconFive" src="" class="mx-auto">
+                        <p id="tempDayFive" class="text-gray-700 text-clip"></p>
+                        <p id="windDayFive" class="text-gray-700"></p>
+                        <p id="humidityDayFive" class="text-gray-700"></p>
                     </div>
                 </section>
 

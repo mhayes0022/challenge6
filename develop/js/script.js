@@ -72,49 +72,49 @@ function getFiveDayForecast(lat, lon) {
     fetch(openWeatherURL).then((res) => res.json())
         .then(data => {
             //forecast information for tomorrow
-            let unixDateOne = data.list[0].dt;
-            let iconIdOne = data.list[0].weather[0].icon;
+            let unixDateOne = data.list[8].dt;
+            let iconIdOne = data.list[8].weather[0].icon;
             let weatherIconOne = `https://openweathermap.org/img/wn/${iconIdOne}@2x.png`
             forecastOneIcon.setAttribute('src', weatherIconOne);
-            forecastOneTemperature.innerHTML = ('Temperature: ' + data.list[0].main.temp);
-            forecastOneWind.innerHTML = ('Wind Speed: ' + data.list[0].wind.speed);
-            forecastOneHumidity.innerHTML = ('Humidity: ' + data.list[0].main.humidity);
+            forecastOneTemperature.innerHTML = ('Temperature: ' + data.list[8].main.temp);
+            forecastOneWind.innerHTML = ('Wind Speed: ' + data.list[8].wind.speed);
+            forecastOneHumidity.innerHTML = ('Humidity: ' + data.list[8].main.humidity);
 
             //forecast information for the day after tomorrow
-            let unixDateTwo = data.list[8].dt;
-            let iconIdTwo = data.list[8].weather[0].icon;
+            let unixDateTwo = data.list[16].dt;
+            let iconIdTwo = data.list[16].weather[0].icon;
             let weatherIconTwo = `https://openweathermap.org/img/wn/${iconIdTwo}@2x.png`
             forecastTwoIcon.setAttribute('src', weatherIconTwo);
-            forecastTwoTemperature.innerHTML = ('Temperature: ' + data.list[8].main.temp);
-            forecastTwoWind.innerHTML = ('Wind Speed: ' + data.list[8].wind.speed);
-            forecastTwoHumidity.innerHTML = ('Humidity: ' + data.list[8].main.humidity);
+            forecastTwoTemperature.innerHTML = ('Temperature: ' + data.list[16].main.temp);
+            forecastTwoWind.innerHTML = ('Wind Speed: ' + data.list[16].wind.speed);
+            forecastTwoHumidity.innerHTML = ('Humidity: ' + data.list[16].main.humidity);
 
             //forecast information for three days from now
-            let unixDateThree = data.list[16].dt;
-            let iconIdThree = data.list[16].weather[0].icon;
+            let unixDateThree = data.list[24].dt;
+            let iconIdThree = data.list[24].weather[0].icon;
             let weatherIconThree = `https://openweathermap.org/img/wn/${iconIdThree}@2x.png`
             forecastThreeIcon.setAttribute('src', weatherIconThree);
-            forecastThreeTemperature.innerHTML = ('Temperature: ' + data.list[16].main.temp);
-            forecastThreeWind.innerHTML = ('Wind Speed: ' + data.list[16].wind.speed);
-            forecastThreeHumidity.innerHTML = ('Humidity: ' + data.list[16].main.humidity);
+            forecastThreeTemperature.innerHTML = ('Temperature: ' + data.list[24].main.temp);
+            forecastThreeWind.innerHTML = ('Wind Speed: ' + data.list[24].wind.speed);
+            forecastThreeHumidity.innerHTML = ('Humidity: ' + data.list[24].main.humidity);
 
             //forecast information for four days from now
-            let unixDateFour = data.list[24].dt;
-            let iconIdFour = data.list[24].weather[0].icon;
+            let unixDateFour = data.list[32].dt;
+            let iconIdFour = data.list[32].weather[0].icon;
             let weatherIconFour = `https://openweathermap.org/img/wn/${iconIdFour}@2x.png`
             forecastFourIcon.setAttribute('src', weatherIconFour);
-            forecastFourTemperature.innerHTML = ('Temperature: ' + data.list[24].main.temp);
-            forecastFourWind.innerHTML = ('Wind Speed: ' + data.list[24].wind.speed);
-            forecastFourHumidity.innerHTML = ('Humidity: ' + data.list[24].main.humidity);
+            forecastFourTemperature.innerHTML = ('Temperature: ' + data.list[32].main.temp);
+            forecastFourWind.innerHTML = ('Wind Speed: ' + data.list[32].wind.speed);
+            forecastFourHumidity.innerHTML = ('Humidity: ' + data.list[32].main.humidity);
 
             //forecast information for five days from now
-            let unixDateFive = data.list[32].dt;
-            let iconIdFive = data.list[32].weather[0].icon;
+            let unixDateFive = data.list[39].dt;
+            let iconIdFive = data.list[39].weather[0].icon;
             let weatherIconFive = `https://openweathermap.org/img/wn/${iconIdFive}@2x.png`
             forecastFiveIcon.setAttribute('src', weatherIconFive);
-            forecastFiveTemperature.innerHTML = ('Temperature: ' + data.list[32].main.temp);
-            forecastFiveWind.innerHTML = ('Wind Speed: ' + data.list[32].wind.speed);
-            forecastFiveHumidity.innerHTML = ('Humidity: ' + data.list[32].main.humidity);
+            forecastFiveTemperature.innerHTML = ('Temperature: ' + data.list[39].main.temp);
+            forecastFiveWind.innerHTML = ('Wind Speed: ' + data.list[39].wind.speed);
+            forecastFiveHumidity.innerHTML = ('Humidity: ' + data.list[39].main.humidity);
 
             convertDates(unixDateOne, unixDateTwo, unixDateThree, unixDateFour, unixDateFive);
             //console.log(data.list);
@@ -212,5 +212,3 @@ searchHistoryBtns();
 //what hours do I set the forecast to get? Is there a way to have it filter to always retrieve noon?
 //display today's date at top of current forecast
 //contingency for if a non city is searched
-//styling
-//current weather section collapses funny in smaller screen sizes
