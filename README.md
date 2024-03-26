@@ -13,7 +13,7 @@ the application sends the city name to the OpenWeather API and retrieves the wea
 
 
 ## Credits
-This application was coded entirely by me. However, I received guidance and feedback from a tutor through the University of Minnesota, as well as from the TAs for the fullstack coding bootcamp through the University of Minnesota. In particular, the tutor was very helpful in regards to the storeInLocalStorage function, and the TAs helped give advice for ways to clean up the code. Additionally, the Learning Assistant AI the University of Minnesota provides for the use of coding bootcamp students was helpful in pointing me in the right direction for how to convert the unix timestamp within the API response into a day/month format, and to help correct syntax errors with the current weather API call. 
+This application was coded entirely by me. However, I received guidance and feedback from a tutor through the University of Minnesota, as well as from the TAs for the fullstack coding bootcamp through the University of Minnesota. In particular, the tutor was very helpful in regards to the storeInLocalStorage function, and the TAs helped give advice for ways to clean up the code. Additionally, the Learning Assistant AI the University of Minnesota provides for the use of coding bootcamp students was helpful in pointing me in the right direction for how to convert the unix timestamp within the API response into a day/month format, and to help correct syntax errors within the current weather API call. 
 
 ## License
 
