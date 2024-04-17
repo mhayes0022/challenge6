@@ -7,7 +7,7 @@ On the left side of the page is the search section. When you enter a city name i
 the application sends the city name to the OpenWeather API and retrieves the weather information for that city. If the user submits a blank search bar, the page will send an alert that the user must enter a city. If what the user has entered is not a valid city, it will also return an alert declaring such. Below the submit button is the search history section. Each time you submit a valid city, a button is created with that city name in the search history section. When you click on one of these buttons, that city is resubmitted to the API, and its weather is displayed again. The main section of the page is devoted to the weather results. The top portion displays the searched city name, and below that its weather conditions including current temperature, wind speed, and humidity. It also displays an icon representing current weather conditions in that city. Below the current weather section is the five day forecast section. It displays the forecasted weather conditions for the searched city for the next five days. There are five columns, one for each day. At the top of each column is the date for the forecast, the temperature, wind speed, humidity, and a weather icon corresponding with the weather conditions for that day. If you close the page and return to it later, the previously searched cities remain in the search history section.
 
 ## Website Link
-
+https://mhayes0022.github.io/challenge6/
 
 ## Website Screenshot
 ![What's the Weather2](https://github.com/mhayes0022/challenge6/assets/153241703/e317ee38-d48e-4821-bad9-a9f985d81e8f)
